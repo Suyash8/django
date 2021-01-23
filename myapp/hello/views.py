@@ -2,4 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-  return HttpResponse("Hello, world!")
+    return render(request, "hello/index.html")
+    
+#def brian(request):
+#	return HttpResponse("Hello, Brian!")
+
+def greet(request, name):
+    return HttpResponse(f"Hello, {name.capitalize()  }!")
